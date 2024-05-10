@@ -40,7 +40,7 @@ function Attendance(props) {
     }
     useEffect(() => {
         if (studentId || studentId && !applyClicked) {
-            axios.get(`http://localhost:8000/leave/list/${studentId}`, { headers: { Authorization: "Bearer " + jwt } }).then((res) => {
+            axios.get(`https://attendanceportal-be.onrender.com/leave/list/${studentId}`, { headers: { Authorization: "Bearer " + jwt } }).then((res) => {
                 setStudentLeave(pre => { return { ...pre, leave: res.data.leaveList } })
             }).catch((res) => {
                 console.log(res)
@@ -59,7 +59,7 @@ function Attendance(props) {
         setSelectedDates([])
         setStudentLeave({ leave: {} })
         if (staffSelection?.operation?.value === "Mark absent for Student") {
-            axios.get("http://localhost:8000/user/list", { headers: { Authorization: "Bearer " + jwt } }).then((res) => {
+            axios.get("https://attendanceportal-be.onrender.com/user/list", { headers: { Authorization: "Bearer " + jwt } }).then((res) => {
                 setStudentsList(res.data.studentsData);
             }).catch((res) => {
                 console.log(res)

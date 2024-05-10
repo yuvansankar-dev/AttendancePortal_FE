@@ -19,7 +19,7 @@ function Navigation(props) {
     useEffect(() => {
         if (!Object.keys(userDetail).length) {
             if (jwtValue) {
-                axios.get("http://localhost:8000/user/verify", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
+                axios.get("https://attendanceportal-be.onrender.com/user/verify", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
                     setLoading(false)
                     dispatch(assignUserInfo(res.data.userData))
                 }).catch(res => {
@@ -39,7 +39,7 @@ function Navigation(props) {
 
     useEffect(() => {
         if (!Object.keys(holidayDetail).length && Object.keys(userDetail).length) {
-            axios.get("http://localhost:8000/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
+            axios.get("https://attendanceportal-be.onrender.com/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
                 dispatch(assignHolidayInfo(res.data.holidayList))
             }).catch(res => {
                 console.log(res)

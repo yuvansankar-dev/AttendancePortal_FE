@@ -23,13 +23,13 @@ function Home(props) {
         const lastLeave = lastWeekDays >= -5 ? 0 : 1;
         setDayCount((pre) => { return { ...pre, weekEndCount: (weeksDifference * 2) + firstLeave + lastLeave } });
         let apiCalls = []
-        apiCalls.push(axios.get("http://localhost:8000/holiday/count", {
+        apiCalls.push(axios.get("https://attendanceportal-be.onrender.com/holiday/count", {
             headers: {
                 Authorization: "Bearer " + jwt
             }
         }))
         if (userDetail.role === "Student") {
-            apiCalls.push(axios.get(`http://localhost:8000/leave/count/${userDetail.userId}`, {
+            apiCalls.push(axios.get(`https://attendanceportal-be.onrender.com/leave/count/${userDetail.userId}`, {
                 headers: {
                     Authorization: "Bearer " + jwt
                 }

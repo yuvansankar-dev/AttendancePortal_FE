@@ -76,7 +76,7 @@ function Register(props) {
                 password: registerInfo.password.value,
             }
             //Login check API call
-            axios.post("http://localhost:8000/user/register", payloadData).then(res => {
+            axios.post("https://attendanceportal-be.onrender.com/user/register", payloadData).then(res => {
                 setLoading(false)
                 res.data.msg ? setToggleInfo({ msg: res.data.msg, success: true }) : setToggleInfo({ msg: res.data.errMsg, success: false })
                 navigate("/login")

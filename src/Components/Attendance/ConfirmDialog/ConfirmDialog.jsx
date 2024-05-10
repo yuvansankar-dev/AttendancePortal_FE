@@ -12,7 +12,7 @@ function ConfirmDialog({ selectedDates, userId, setApplyClicked }) {
 
     const sumbitClicked = () => {
         if (userId) {
-            axios.post("http://localhost:8000/leave/apply", {
+            axios.post("https://attendanceportal-be.onrender.com/leave/apply", {
                 userId,
                 selectedDates,
                 reason: leaveInfo.reason.value,
@@ -23,12 +23,12 @@ function ConfirmDialog({ selectedDates, userId, setApplyClicked }) {
             })
         }
         else {
-            axios.post("http://localhost:8000/holiday/apply", {
+            axios.post("https://attendanceportal-be.onrender.com/holiday/apply", {
                 selectedDates,
                 reason: leaveInfo.reason.value,
             }, { headers: { Authorization: "Bearer " + jwtValue } }).then(() => {
                 setApplyClicked(false)
-                axios.get("http://localhost:8000/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
+                axios.get("https://attendanceportal-be.onrender.com/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
                     dispatch(assignHolidayInfo(res.data.holidayList))
                 }).catch(res => {
                     console.log(res)

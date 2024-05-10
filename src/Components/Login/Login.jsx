@@ -34,7 +34,7 @@ function Login(props) {
                 userId: loginInfo.userId.value,
                 password: loginInfo.password.value,
             }
-            axios.post("http://localhost:8000/user/login", payloadData).then(res => {
+            axios.post("https://attendanceportal-be.onrender.com/user/login", payloadData).then(res => {
                 setLoading(false)
                 dispatch(assignUserInfo(res.data.userData))
                 sessionStorage.setItem("attendanceJWT", res.data.jwt)

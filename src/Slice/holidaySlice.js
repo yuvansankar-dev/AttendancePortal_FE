@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const getHoliday = createAsyncThunk("GetHoliday", async (jwtValue) => {
-    const result = await axios.get("http://localhost:8000/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } })
+    const result = await axios.get("https://attendanceportal-be.onrender.com/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } })
     return result.data;
 })
 const holidaySlice = createSlice({
