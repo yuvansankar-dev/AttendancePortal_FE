@@ -1,0 +1,42 @@
+.calenderSelector {
+    width: 200px;
+}
+
+.staffOption,
+.calenderOption {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    margin: 10px;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+.dateComponent {
+    display: flex;
+    justify-content: center;
+}
+
+.calenderGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    margin: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.dayTitle,
+.dayValue {
+    padding: 10px 0px;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-weight: bold;
+    background-color: #f2ddb5;
+}
+
+.dayTitle {
+    background-color: #ac7201;
+    color: white;
+}

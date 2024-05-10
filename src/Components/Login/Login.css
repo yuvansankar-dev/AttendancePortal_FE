@@ -1,0 +1,97 @@
+.imageContainer {
+    background-image: url("../../assets/pexels-olia-danilevich-5088017.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.loginCard {
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputTag  {
+    padding-left: 8px;
+    min-height: 40px;
+    width: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.inputLabel {
+    position: absolute;
+    transform: translateX(8px) translateY(-50%);
+    transition: transform 0.2s, top 0.2s, background-color 0.2s;
+    left: 0px;
+    top: 50%;
+    pointer-events: none;
+    color: #cdcac4;
+    background-color: white;
+    font-size: 12px;
+}
+
+.inputTag:focus+.inputLabel,.inputTag:valid:not(:focus)+.inputLabel{
+    color: #d08d08;
+    font-size: 10px;
+    transform: translateX(13px) translateY(-50%);
+    top: 0px;
+    padding: 0px 5px;
+}
+.inputTag:valid:not(:focus)+.inputLabel {
+    color: #86837c;
+}
+.inputTag:valid:not(:focus){
+    border-color: #86837c;
+}
+
+.inputTag:focus-visible {
+    border: 1px solid #d08d08;
+    outline: 0px;
+}
+
+h2{
+    text-align: center;
+    color: #ac7201;
+}
+.showPassword{
+    display: flex;
+    gap:6px;
+}
+.passwordIcon{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+button{
+    width: fit-content;
+    padding: 6px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    align-self: center;
+    border: 1px solid #ac7201;
+    background-color: #f2ddb5;
+}
+.registerAccount{
+    text-align: right;
+    margin-bottom: 22px;
+    color: #d08d08;
+    cursor: pointer;
+}
+.registerAccount:hover{
+color: #ac7201;
+}

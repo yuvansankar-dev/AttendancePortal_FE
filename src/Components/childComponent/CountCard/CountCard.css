@@ -1,0 +1,12 @@
+.countCard {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-items: center;
+    width: 200px;
+    gap: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 30%) !important;
+}
+.countTitle{
+    margin:10px 0px;
+}

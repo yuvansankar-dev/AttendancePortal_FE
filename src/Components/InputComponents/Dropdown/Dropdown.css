@@ -1,0 +1,187 @@
+.downArrow {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.upArrow {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-50%);
+    rotate: 180deg;
+    bottom: 50%;
+}
+
+.dropdownWithoutValue,
+.dropdownWithValue {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.dropdownWithValue {
+    border: 1px solid #86837c;
+}
+
+.dropdownAreaOpen {
+    border: 1px solid #d08d08;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Start */
+.dropdown{
+    border: 1px solid black;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer; 
+}
+.withValue{
+    border: 1px solid #86837c;
+}
+.withError{
+    border: 1px solid red;
+}
+.open{
+    border: 1px solid #d08d08;
+}
+.dropdown img{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.open img{
+    rotate: 180deg;
+    bottom: 50%;
+}
+.close img{
+    top: 50%;
+}
+#dropdownLabel{
+    position: absolute;
+    transform: translateX(8px) translateY(-50%);
+    transition: transform 0.2s, top 0.2s, background-color 0.2s;
+    left: 0px;
+    pointer-events: none;
+    background-color: white;
+    top: 50%;
+    color: #cdcac4;
+    font-size: 12px;
+}
+.withValue #dropdownLabel{
+    color: #86837c;
+    font-size: 10px;
+    transform: translateX(13px) translateY(-50%);
+    top: 0px;
+    padding: 0px 5px;
+}
+.open #dropdownLabel{
+    color: #d08d08;
+    font-size: 10px;
+    transform: translateX(13px) translateY(-50%);
+    top: 0px;
+    padding: 0px 5px;
+}
+
+/* .withError #dropdownLabel{
+    color: red;
+} */
+.valueText {
+    position: absolute;
+    transform: translateX(8px) translateY(-50%);
+    left: 0px;
+    top: 50%;
+    font-size: 15px;
+}
+.withError .valueText {
+    position: absolute;
+    transform: translateX(8px) translateY(-50%);
+    left: 0px;
+    top: 50%;
+    font-size: 15px;
+    color: red;
+}
+
+/* end */
+.moveText {
+    color: #d08d08;
+    font-size: 10px;
+    transform: translateX(13px) translateY(-50%);
+    top: 0px;
+    padding: 0px 5px;
+    position: absolute;
+    transition: transform 0.2s, top 0.2s, background-color 0.2s;
+    left: 0px;
+    pointer-events: none;
+    background-color: white;
+}
+
+.normalText {
+    position: absolute;
+    transform: translateX(8px) translateY(-50%);
+    transition: transform 0.2s, top 0.2s, background-color 0.2s;
+    left: 0px;
+    top: 50%;
+    pointer-events: none;
+    color: #cdcac4;
+    background-color: white;
+    font-size: 12px;
+}
+
+/* .valueText {
+    position: absolute;
+    transform: translateX(8px) translateY(-50%);
+    left: 0px;
+    top: 50%;
+    font-size: 15px;
+} */
+
+.options {
+    width: 100%;
+    border: 1px solid #d08d08;
+    box-sizing: border-box;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.option {
+    font-size: 15px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.option:hover {
+    background-color: #cdcac4;
+}
+
+hr {
+    /* padding: 0px 2px; */
+    margin: 0px 0px;
+}

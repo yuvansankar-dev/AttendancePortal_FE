@@ -1,0 +1,26 @@
+.radioTitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #d08d08;
+}
+
+.radioList {
+    margin-left: 8px;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.radio {
+    cursor: pointer;
+    margin: 0px;
+    margin-right: 5px;
+}
+
+.radioLabel {
+    cursor: pointer;
+    font-size: 14px;
+}

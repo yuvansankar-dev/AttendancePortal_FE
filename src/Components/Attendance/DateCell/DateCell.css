@@ -1,0 +1,51 @@
+.weekend {
+    background-color: #b0a083;
+    color: black;
+}
+
+.previous,
+.next {
+    background-color: #f2ddb580;
+    color: #00000080;
+}
+
+.DateCell {
+    position: relative;
+}
+
+.DateCell input {
+    right: 0px;
+    top: 0px;
+    width: 15px;
+    position: absolute;
+    height: 15px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.DateCell .weekend+input {
+    display: none;
+}
+
+.DateCell .previous+input,
+.DateCell .next+input {
+    display: none;
+}
+
+.DateCell .disable+input {
+    display: none;
+}
+
+.DateCell .leave {
+    background-color: darkred;
+    color: white;
+}
+.DateCell .holiday {
+    background-color: darkgreen;
+    color: white;
+}
+
+.DateCell .previous,
+.DateCell .next {
+    color: rgba(0, 0, 0, 0)
+}

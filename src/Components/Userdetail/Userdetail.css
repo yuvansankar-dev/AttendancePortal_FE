@@ -1,0 +1,29 @@
+.userDetailMain{
+    display: flex;
+    justify-content: center;
+}
+.userDetailTitle {
+    width: 40%;
+    color: #ac7201;
+}
+
+.userDetailValue {
+    color: #948b79;
+    width: 40%;
+}
+
+.userDetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.userDetailContainer {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    width: 100%;
+    margin: 20px;
+}

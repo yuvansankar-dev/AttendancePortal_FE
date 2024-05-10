@@ -1,0 +1,24 @@
+.notificationBar{
+    gap: 35px;
+    background-color: white;
+    border-radius: 7px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    transition:right 0.8s;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px;
+}
+.css-i4bv87-MuiSvgIcon-root{
+    color: green;
+    width: 35px !important;
+    height: 35px !important;
+}
+.errorNotification .css-i4bv87-MuiSvgIcon-root{
+    color: darkred;
+    width: 35px !important;
+    height: 35px !important;
+}
