@@ -6,8 +6,11 @@ const userSlice = createSlice({
     reducers: {
         assignUserInfo: function (state, action) {
             return action.payload
+        },
+        logout: function () {
+            return {}
         }
     }
 })
-export const { assignUserInfo } = userSlice.actions;
+export const { assignUserInfo, logout } = userSlice.actions;
 export default userSlice.reducer; 

@@ -3,9 +3,9 @@ import TextInput from "../../InputComponents/TextInput/TextInput";
 import "./ConfirmDialog.css"
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { assignHolidayInfo, getHoliday } from "../../../Slice/holidaySlice";
+import { assignHolidayInfo } from "../../../Slice/holidaySlice";
 
-function ConfirmDialog({ selectedDates, userId, setApplyClicked }) {
+function ConfirmDialog({ selectedDates, userId, setApplyClicked, setSelectedDates }) {
     const [leaveInfo, setLeaveInfo] = useState({ reason: { value: "", errorMsg: "" } });
     const jwtValue = sessionStorage.getItem("attendanceJWT");
     const dispatch = useDispatch()
@@ -18,6 +18,7 @@ function ConfirmDialog({ selectedDates, userId, setApplyClicked }) {
                 reason: leaveInfo.reason.value,
             }, { headers: { Authorization: "Bearer " + jwtValue } }).then(() => {
                 setApplyClicked(false)
+                setSelectedDates([])
             }).catch(() => {
                 setApplyClicked(false)
             })
@@ -28,6 +29,7 @@ function ConfirmDialog({ selectedDates, userId, setApplyClicked }) {
                 reason: leaveInfo.reason.value,
             }, { headers: { Authorization: "Bearer " + jwtValue } }).then(() => {
                 setApplyClicked(false)
+                setSelectedDates([])
                 axios.get("https://attendanceportal-be.onrender.com/holiday/list", { headers: { Authorization: "Bearer " + jwtValue } }).then((res) => {
                     dispatch(assignHolidayInfo(res.data.holidayList))
                 }).catch(res => {

@@ -3,6 +3,8 @@ import CountCard from "../childComponent/CountCard/CountCard";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import "./Home.css"
+import DonutChart from "./DonutChart/DonutChart";
+import BarChart from "./BarChart/BarChart";
 
 function Home(props) {
     const userDetail = useSelector(state => state.userDetail)
@@ -53,8 +55,8 @@ function Home(props) {
     return (
         <>
             <div className="countCardContainer">
-                <div style={{marginBottom:"30px"}}><h3 className="note">This counts are from 01/01/2024 to today</h3><div className="info">No of days bewtween 01/01/2024 - today : {dayCount.totalDays}</div></div>
-                <div></div>
+                <div><h3 className="note">This counts are from 01/01/2024 to today</h3><div className="info">No of days bewtween 01/01/2024 - today : {dayCount.totalDays}</div></div>
+                <div className="chart">{userDetail.role === "Student" ? <DonutChart workingDays={dayCount.workingDays} weekEndCount={dayCount.weekEndCount} holidayCount={dayCount.holidayTakenCount} leaveCount={dayCount.leaveTakenCount} /> : <BarChart />}</div>
 
                 <CountCard dayCount={dayCount.workingDays} title="Total Working days" />
                 <CountCard dayCount={dayCount.weekEndCount} title="Total Weekend count" />

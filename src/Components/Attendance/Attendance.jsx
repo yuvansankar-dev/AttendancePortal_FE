@@ -55,6 +55,7 @@ function Attendance(props) {
         const currentMonth = monthNames.indexOf(selectedMonth.selectedMonth.value)
         changeCalender(currentMonth + 1)
     }, [selectedMonth.selectedMonth.value])
+
     useEffect(() => {
         setSelectedDates([])
         setStudentLeave({ leave: {} })
@@ -135,7 +136,7 @@ function Attendance(props) {
             <div style={{ display: "flex", justifyContent: "center" }}><div className="calenderOption" style={{ justifyContent: "center" }}>
                 <button disabled={!selectedDates.length} onClick={applyClick}>{buttonText}</button>
             </div></div>
-            {applyClicked && <ConfirmDialog selectedDates={selectedDates} userId={studentId} setApplyClicked={setApplyClicked} />}
+            {applyClicked && <ConfirmDialog selectedDates={selectedDates} setSelectedDates={setSelectedDates} userId={studentId} setApplyClicked={setApplyClicked} />}
         </>
     )
 }

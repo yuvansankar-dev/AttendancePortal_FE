@@ -20,7 +20,7 @@ function Radiobutton({ label, keyName, options, data, setData }) {
         <>
             <div className="radioTitle">{label}</div><div className="radioList">
                 {options.map((val) =>
-                    <div key={val} className="radioOption"><input className="radio" type="radio" id={val} name={label} onClick={() => changeInputData(val)} checked={data[keyName]?.value===val}/>
+                    <div key={val} className="radioOption"><input className="radio" defaultChecked={false} type="radio" id={val} name={label} onClick={() => changeInputData(val)} checked={data[keyName]?.value===val}/>
                         <label className="radioLabel" htmlFor={val}>{val}</label></div>
                 )}</div>
 

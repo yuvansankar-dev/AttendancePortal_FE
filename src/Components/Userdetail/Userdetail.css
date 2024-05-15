@@ -27,3 +27,8 @@
     width: 100%;
     margin: 20px;
 }
+.logout{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
