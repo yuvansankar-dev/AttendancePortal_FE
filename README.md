@@ -10,16 +10,13 @@ User ID: Staff1
 
 Password: Staff123
 
-Student Account - 1:
-
-
-- Student Account
+-Student Account - 1:
 
 User ID: Student1
 
 Password: Student123
 
-Student Account - 2:
+- Student Account - 2:
 
 User ID: Student2
 
@@ -67,6 +64,7 @@ Total attended day count (from 1/1/2024 to the current date)
 # On the Attendance Detail Screen:
 
 - For Staff Account:
+  
 Staff can declare leave for students (shown in green).
 
 Staff can mark students as absent (shown in red).
@@ -75,6 +73,7 @@ Weekends are marked in gray. If staff choose to declare a holiday, they can sele
 
 
  - For Student Account:
+   
 In the student account, staff can select multiple date checkboxes and mark leave with a desired reason.
 
 # On the User Detail Screen:
