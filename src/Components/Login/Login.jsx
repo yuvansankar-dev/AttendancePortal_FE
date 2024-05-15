@@ -42,7 +42,7 @@ function Login(props) {
                 navigate("/")
             }).catch((res) => {
                 setLoading(false)
-                setToggleInfo({ msg: res.message??res.response.data.errMsg, success: false })
+                setToggleInfo({ msg: res?.response?.data?.errMsg ?? res.message, success: false })
             })
         }
     }, [loginInfo])
