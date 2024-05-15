@@ -10,7 +10,7 @@ User ID: Staff1
 
 Password: Staff123
 
--Student Account - 1:
+- Student Account - 1:
 
 User ID: Student1
 
